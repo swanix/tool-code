@@ -1,8 +1,5 @@
-# Embed Code - Plugin
 
-Experimental Codemirror plugin for Docsify
-
-## Quick start
+# Quick start
 
 Embed Code es un plugin de Docsify que te permite incrustar ejemplos de código en tu documentación utilizando Codemirror en tus archivos markdown. 
 
@@ -50,6 +47,7 @@ CSS que debe ir en el `<head>` de tu archivo index.html
     basePath: 'content/',
     homepage: '_site-home.md',
     loadSidebar: '_site-menu.md',
+    auto2top: true,
   };
 </script>
 
