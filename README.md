@@ -16,21 +16,21 @@ Incluye los siguientes links de CDN en tu archivo index.html
 
 Archivo JavaScript que debes incluir luego del archivo de Docsify
 
-```
+```html
 <script src="//cdn.jsdelivr.net/gh/sebastianserna/embed-code/dist/embed-code.js"></script>
 
 ```
 
 CSS que debe ir en el `<head>` de tu archivo index.html
 
-```
+```html
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/sebastianserna/embed-code/dist/embed-code.css">
 
 ```
 
 #### Template rápido
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +50,15 @@ CSS que debe ir en el `<head>` de tu archivo index.html
     basePath: 'content/',
     homepage: '_site-home.md',
     loadSidebar: '_site-menu.md',
+    plugins: [
+      function(hook, vm) {
+        hook.doneEach(function() {
+          codePreviewCssFile = "https://swanix.org/ui/dist/swanix.min.css";
+          // codePreviewCssFile2 = "dist/theme1.css";
+          // codePreviewJsFile = "";
+        });
+      }
+    ]
   };
 </script>
 
@@ -60,6 +69,16 @@ CSS que debe ir en el `<head>` de tu archivo index.html
 </body>
 </html>
 
+```
+
+### Dependencias
+
+Este plugin utiliza la librería Codemirror v5.48.4
+
+```html
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/xml/xml.min.js"></script>
 ```
 
 

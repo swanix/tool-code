@@ -1,6 +1,6 @@
   * [Quick start](/)
   * Examples
-    * [CSS Embed](/css)
     * [HTML Embed](/html)
+    * [CSS Embed](/css)
     * [JS Embed](/js)
     * [Vue Embed](/vue)

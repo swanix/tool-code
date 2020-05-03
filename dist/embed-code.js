@@ -1,6 +1,6 @@
-// Docsify - Codemirror
+// Embed Code - Docsify Pluegin
 // v0.1.0
-// Swanix - 2019
+// By Sebastian Serna
 
 "use strict";
 
