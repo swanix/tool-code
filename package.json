@@ -1,5 +1,5 @@
 {
-  "name": "@sebastianserna/embed-code",
+  "name": "@swanix/coderix",
   "version": "0.1.0",
   "description": "Embed code plugin",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sebastianserna/embed-code"
+    "url": "git+https://github.com/swanix/coderix"
   },
   "author": "Sebastian Serna <jsebastianserna@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sebastianserna/embed-code/issues"
+    "url": "https://github.com/swanix/coderix/issues"
   },
-  "homepage": "https://sebastianserna.com/embed-code",
+  "homepage": "https://swanix.org/coderix",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 2.14.2"
