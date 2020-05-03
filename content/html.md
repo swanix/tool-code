@@ -9,7 +9,6 @@
 <button class="is-secondary">Button</button>
 <button class="is-outline">Button</button>
 <button class="is-ghost">Button</button>
-<br><br>
 <h5>Link Buttons</h5>
 <a href="#" class="button">Button</a>
 <a href="#" class="button is-primary">Button</a>

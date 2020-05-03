@@ -1,6 +1,7 @@
 #### CSS
 
-<textarea class="code-editor" name="code">
+<iframe class="code-preview" height="280px"></iframe>
+<textarea class="code-editor-css" name="code">
 html {
   font-size: 62.5%;
 }

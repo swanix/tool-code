@@ -1,7 +1,8 @@
 
 #### JavaScript
 
-<textarea class="code-editor" name="code">
+<iframe class="code-preview" height="280px"></iframe>
+<textarea class="code-editor-js" name="code">
   function previewCode() {
     let codePreview = document.querySelectorAll(".code-preview");
     let preview =  codePreview[i].contentDocument;

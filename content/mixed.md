@@ -1,5 +1,6 @@
 #### Mixed (HTML, CSS, JavaScript)
 
+<iframe class="code-preview" height="120px"></iframe>
 <textarea class="code-editor" name="code">
 <a href="#" class="button">Button</a>
 <a href="#" class="button is-primary">Button</a>

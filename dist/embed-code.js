@@ -19,11 +19,41 @@ function codePreview (hook, vm) {
 }
 
 function codePreviewInit() { 
-  let codeEditor = document.querySelectorAll(".code-editor");
-
-  for (var i = 0; i < codeEditor.length; i++) {
-    var editor = CodeMirror.fromTextArea(codeEditor[i], {
+  // Instance for HTML Files
+  let codeEditorHtml = document.querySelectorAll(".code-editor, .code-editor-html");
+  for (var i = 0; i < codeEditorHtml.length; i++) {
+    var editor = CodeMirror.fromTextArea(codeEditorHtml[i], {
       mode: "htmlmixed",
+      theme: "dracula",
+      readOnly: true,
+      lineNumbers: true
+    });
+    previewCode();
+    addStylesheet(codePreviewCssFile);
+    addStylesheet2(codePreviewCssFile2);
+    addScript(codePreviewJsFile);
+    addFrameBasicStyle();
+  }
+  // Instance for CSS Files
+  let codeEditorCss = document.querySelectorAll(".code-editor-css");
+  for (var i = 0; i < codeEditorCss.length; i++) {
+    var editor = CodeMirror.fromTextArea(codeEditorCss[i], {
+      mode: "css",
+      theme: "dracula",
+      readOnly: true,
+      lineNumbers: true
+    });
+    previewCode();
+    addStylesheet(codePreviewCssFile);
+    addStylesheet2(codePreviewCssFile2);
+    addScript(codePreviewJsFile);
+    addFrameBasicStyle();
+  }
+  // Instance for CSS Files
+  let codeEditorJs = document.querySelectorAll(".code-editor-js");
+  for (var i = 0; i < codeEditorJs.length; i++) {
+    var editor = CodeMirror.fromTextArea(codeEditorJs[i], {
+      mode: "javascript",
       theme: "dracula",
       readOnly: true,
       lineNumbers: true
