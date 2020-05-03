@@ -23,8 +23,8 @@ function codePreviewInit() {
 
   for (var i = 0; i < codeEditor.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditor[i], {
-      mode: "text/html",
-      theme: "base16-light",
+      mode: "htmlmixed",
+      theme: "dracula",
       readOnly: true,
       lineNumbers: true
     });
