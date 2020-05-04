@@ -1,8 +1,4 @@
-# Coderix
-
-Experimental plugin for Docsify
-
-## Quick start
+# Quick start
 
 Coderix es un plugin de Docsify que te permite incrustar ejemplos de código en tu documentación utilizando Codemirror en archivos markdown. 
 
