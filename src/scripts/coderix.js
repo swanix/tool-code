@@ -22,7 +22,7 @@ function codePreviewInit() {
   for (var i = 0; i < codeEditorHtml.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorHtml[i], {
       mode: "xml",
-      theme: "base16-light",
+      theme: "coderix",
       readOnly: true,
       lineNumbers: true
     });
@@ -37,7 +37,7 @@ function codePreviewInit() {
   for (var i = 0; i < codeEditorCss.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorCss[i], {
       mode: "css",
-      theme: "base16-light",
+      theme: "coderix",
       readOnly: true,
       lineNumbers: true
     });
@@ -52,7 +52,7 @@ function codePreviewInit() {
   for (var i = 0; i < codeEditorJs.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorJs[i], {
       mode: "javascript",
-      theme: "base16-light",
+      theme: "coderix",
       readOnly: true,
       lineNumbers: true
     });
