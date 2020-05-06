@@ -1,6 +1,6 @@
 /*!
- * Coderix - v0.1.0
+ * Coderix - v0.1.1
  * https://github.com/swanix/coderix
  * @license MIT
- * Based on Codemirror - v5.48.4
+ * Based on CodeMirror - v5.53.2
 */
