@@ -80,6 +80,8 @@ var inputJs = [
     "src/scripts/codemirror-mode-javascript.js",
     "src/scripts/codemirror-mode-xml.js",
     "src/scripts/codemirror-mode-css.js",
+    "src/scripts/codemirror-mode-vue.js",
+    "src/scripts/codemirror-mode-htmlmixed.js",
     "src/scripts/coderix.js"
 ];
 var outputJs = 'dist/';

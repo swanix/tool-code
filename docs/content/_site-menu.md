@@ -1,5 +1,6 @@
   * [Quick start](/)
   * Examples
-    * [HTML mode](/html)
-    * [CSS mode](/css)
-    * [JavaScript mode](/js)
+    * [HTML](/html)
+    * [CSS](/css)
+    * [JavaScript](/js)
+    * [Vue](/vue)

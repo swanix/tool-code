@@ -2,8 +2,9 @@
 
 "use strict";
 
-let loadJs = [];
-let loadCss = [];
+let codePreviewCssFile;
+let codePreviewCssFile2;
+let codePreviewJsFile;
 
 let delay;
 
@@ -16,7 +17,7 @@ function codePreview (hook, vm) {
 }
 
 function codePreviewInit() { 
-  // Instance for HTML code
+  // Instance for HTML Files
   let codeEditorHtml = document.querySelectorAll(".code-editor, .code-editor-html");
   for (var i = 0; i < codeEditorHtml.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorHtml[i], {
@@ -26,11 +27,12 @@ function codePreviewInit() {
       lineNumbers: true
     });
     previewCode();
-    addStylesheets();
-    addScripts();
+    addStylesheet(codePreviewCssFile);
+    addStylesheet2(codePreviewCssFile2);
+    addScript(codePreviewJsFile);
     addFrameBasicStyle();
   }
-  // Instance for CSS code
+  // Instance for CSS Files
   let codeEditorCss = document.querySelectorAll(".code-editor-css");
   for (var i = 0; i < codeEditorCss.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorCss[i], {
@@ -40,11 +42,12 @@ function codePreviewInit() {
       lineNumbers: true
     });
     previewCode();
-    addStylesheets();
-    addScripts();
+    addStylesheet(codePreviewCssFile);
+    addStylesheet2(codePreviewCssFile2);
+    addScript(codePreviewJsFile);
     addFrameBasicStyle();
   }
-  // Instance for JS code
+  // Instance for CSS Files
   let codeEditorJs = document.querySelectorAll(".code-editor-js");
   for (var i = 0; i < codeEditorJs.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorJs[i], {
@@ -54,38 +57,9 @@ function codePreviewInit() {
       lineNumbers: true
     });
     previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-  }
-
-  // Instance for Vue code
-  let codeEditorVue = document.querySelectorAll(".code-editor-vue");
-  for (var i = 0; i < codeEditorVue.length; i++) {
-    var editor = CodeMirror.fromTextArea(codeEditorVue[i], {
-      mode: "vue",
-      theme: "coderix",
-      readOnly: true,
-      lineNumbers: true
-    });
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-  }
-
-  // Instance for HTML Mixed code
-  let codeEditorMixed = document.querySelectorAll(".code-editor-mixed");
-  for (var i = 0; i < codeEditorMixed.length; i++) {
-    var editor = CodeMirror.fromTextArea(codeEditorMixed[i], {
-      mode: "htmlmixed",
-      theme: "coderix",
-      readOnly: true,
-      lineNumbers: true
-    });
-    previewCode();
-    addStylesheets();
-    addScripts();
+    addStylesheet(codePreviewCssFile);
+    addStylesheet2(codePreviewCssFile2);
+    addScript(codePreviewJsFile);
     addFrameBasicStyle();
   }
 
@@ -96,33 +70,36 @@ function codePreviewInit() {
     preview.write(editor.getValue());
     preview.close();
   }    
-
-  // Add stylesheets
-  function addStylesheets(href) {
+    
+  function addStylesheet(file) {
     let codePreview = document.querySelectorAll('.code-preview');
     let codePreviewDoc = codePreview[i].contentDocument.head;
-    loadCss.forEach(function(href) {
-      let css = document.createElement("link");
-      css.type = "text/css";
-      css.rel = "stylesheet";
-      css.href = href;
-      codePreviewDoc.appendChild(css);
-    });
-  };
+    let css = document.createElement("link");
+    css.type = "text/css";
+    css.rel = "stylesheet";
+    css.href = file;
+    codePreviewDoc.appendChild(css);
+  }
 
-  // Add Scripts
-  function addScripts(src) {
+  function addStylesheet2(file) {
     let codePreview = document.querySelectorAll('.code-preview');
     let codePreviewDoc = codePreview[i].contentDocument.head;
-    loadJs.forEach(function(src) {
-      let script = document.createElement('script');
-      script.src = src;
-      script.async = false;
-      codePreviewDoc.appendChild(script);
-    });
-  };
+    let css = document.createElement("link");
+    css.type = "text/css";
+    css.rel = "stylesheet";
+    css.href = file;
+    codePreviewDoc.appendChild(css);
+  }
 
-  function addFrameBasicStyle() {
+  function addScript(file) {
+    let codePreview = document.querySelectorAll('.code-preview');
+    let codePreviewDoc = codePreview[i].contentDocument.head;
+    let js = document.createElement("script");
+    js.src = file;
+    codePreviewDoc.appendChild(js);
+  }
+
+ function addFrameBasicStyle() {
     let codePreview = document.querySelectorAll('.code-preview');
     let codePreviewDoc = codePreview[i].contentDocument.head;
     let basicStyle = document.createElement("style");
@@ -131,6 +108,6 @@ function codePreviewInit() {
       body::before { background: none !important;}
     `;
     codePreviewDoc.appendChild(basicStyle);
-  }
+ }
 
 }
