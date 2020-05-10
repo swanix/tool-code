@@ -1,6 +1,6 @@
 #### CSS
 
-<textarea class="code-editor-css" name="code">
+<textarea class="code-editor css" name="code">
 body {
   font-size: 10px;
   font-family: Tahoma, Geneva, sans-serif;

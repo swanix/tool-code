@@ -1,21 +1,20 @@
 
 #### JavaScript
 
-<textarea class="code-editor-js" name="code">
-  function previewCode() {
-    let codePreview = document.querySelectorAll(".code-preview");
-    let preview =  codePreview[i].contentDocument;
-    preview.open();
-    preview.write(editor.getValue());
-    preview.close();
-  }    
-  function addStylesheet(file) {
-    let codePreview = document.querySelectorAll('.code-preview');
-    let codePreviewDoc = codePreview[i].contentDocument.head;
-    let css = document.createElement("link");
-    css.type = "text/css";
-    css.rel = "stylesheet";
-    css.href = file;
-    codePreviewDoc.appendChild(css);
-  }
+<!-- <iframe class="code-preview" height="280px"></iframe> -->
+<textarea class="code-editor js" name="code">
+<script>
+function addElement() { 
+  var newDiv = document.createElement("div"); 
+  var testContent = `
+    <h1>Title</h1>
+    <p>Paragraph test</p>
+    <button>Button</button>
+    <button class="is-primary">Button</button>
+  `; 
+  newDiv.innerHTML = testContent;
+  document.body.appendChild(newDiv); 
+}
+document.addEventListener("DOMContentLoaded", addElement);
+</script>
 </textarea>

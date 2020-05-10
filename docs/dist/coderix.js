@@ -12239,8 +12239,6 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
 let loadJs = [];
 let loadCss = [];
 
-let delay;
-
 $docsify.plugins = [].concat(codePreview, $docsify.plugins)
 
 function codePreview (hook, vm) {
@@ -12250,6 +12248,10 @@ function codePreview (hook, vm) {
 }
 
 function codePreviewInit() { 
+  let delay;
+
+  // CODE EDITORS INIT
+
   // Instance for HTML code
   let codeEditorHtml = document.querySelectorAll(".code-editor, .code-editor-html");
   for (var i = 0; i < codeEditorHtml.length; i++) {
@@ -12259,13 +12261,15 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
+    createIframePreview();
     previewCode();
     addStylesheets();
     addScripts();
     addFrameBasicStyle();
   }
+
   // Instance for CSS code
-  let codeEditorCss = document.querySelectorAll(".code-editor-css");
+  let codeEditorCss = document.querySelectorAll(".code-editor css");
   for (var i = 0; i < codeEditorCss.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorCss[i], {
       mode: "css",
@@ -12273,13 +12277,15 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
+    createIframePreview();
     previewCode();
     addStylesheets();
     addScripts();
     addFrameBasicStyle();
   }
+
   // Instance for JS code
-  let codeEditorJs = document.querySelectorAll(".code-editor-js");
+  let codeEditorJs = document.querySelectorAll(".code-editor js");
   for (var i = 0; i < codeEditorJs.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorJs[i], {
       mode: "javascript",
@@ -12287,6 +12293,7 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
+    createIframePreview();
     previewCode();
     addStylesheets();
     addScripts();
@@ -12294,7 +12301,7 @@ function codePreviewInit() {
   }
 
   // Instance for Vue code
-  let codeEditorVue = document.querySelectorAll(".code-editor-vue");
+  let codeEditorVue = document.querySelectorAll(".code-editor vue");
   for (var i = 0; i < codeEditorVue.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorVue[i], {
       mode: "vue",
@@ -12302,6 +12309,7 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
+    createIframePreview();
     previewCode();
     addStylesheets();
     addScripts();
@@ -12309,7 +12317,7 @@ function codePreviewInit() {
   }
 
   // Instance for HTML Mixed code
-  let codeEditorMixed = document.querySelectorAll(".code-editor-mixed");
+  let codeEditorMixed = document.querySelectorAll(".code-editor mixed");
   for (var i = 0; i < codeEditorMixed.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorMixed[i], {
       mode: "htmlmixed",
@@ -12317,11 +12325,14 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
+    createIframePreview();
     previewCode();
     addStylesheets();
     addScripts();
     addFrameBasicStyle();
   }
+
+  // CODE EDITOR PREVIEW (iframe)
 
   function previewCode() {
     let codePreview = document.querySelectorAll(".code-preview");
@@ -12330,6 +12341,18 @@ function codePreviewInit() {
     preview.write(editor.getValue());
     preview.close();
   }    
+
+  function createIframePreview() {
+    let codeEditors = document.querySelectorAll(".code-editor");
+    let codeEditorsDest = codeEditors[i];   
+
+    let codePreviewIframe = document.createElement("iframe"); 
+    codePreviewIframe.classList.add("code-preview");
+    
+    codeEditorsDest.insertAdjacentElement('beforebegin', codePreviewIframe);
+  }
+
+  // EXTERNAL CSS & JS RESOURCES
 
   // Add stylesheets
   function addStylesheets(href) {
@@ -12342,7 +12365,7 @@ function codePreviewInit() {
       css.href = href;
       codePreviewDoc.appendChild(css);
     });
-  };
+  }
 
   // Add Scripts
   function addScripts(src) {
@@ -12354,7 +12377,7 @@ function codePreviewInit() {
       script.async = false;
       codePreviewDoc.appendChild(script);
     });
-  };
+  }
 
   function addFrameBasicStyle() {
     let codePreview = document.querySelectorAll('.code-preview');
@@ -12368,3 +12391,4 @@ function codePreviewInit() {
   }
 
 }
+
