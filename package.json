@@ -1,6 +1,6 @@
 {
   "name": "@swanix/coderix",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Embed code plugin",
   "main": "index.js",
   "scripts": {

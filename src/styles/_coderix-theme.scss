@@ -130,10 +130,15 @@ iframe.code-preview {
 }
 
 .code-editor,
+.code-editor-html,
 .code-editor-js,
-.code-editor-css {
+.code-editor-css,
+.code-editor-vue,
+.code-editor-mixed {
   width: 100%;
   min-height: 300px;
   border: 1px solid #f2f2f2;
   color: rgba(0,0,0, 0);
 }
+
+[v-cloak] { display: none; }

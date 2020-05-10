@@ -16,7 +16,8 @@ function codePreview (hook, vm) {
 function codePreviewInit() { 
   let delay;
 
-//  CODE EDITORS INIT
+  //  CODE EDITORS INIT
+  // -------------------------------------------------
 
   // Instance for HTML code
   let codeEditorHtml = document.querySelectorAll(".code-editor, .code-editor-html");
@@ -28,6 +29,11 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
+    previewCode();
+    addStylesheets();
+    addScripts();
+    addFrameBasicStyle();
+    setTimeout(resizeIframePreview, 300);
   }
 
   // Instance for CSS code
@@ -40,6 +46,11 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
+    previewCode();
+    addStylesheets();
+    addScripts();
+    addFrameBasicStyle();
+    setTimeout(resizeIframePreview, 300);
   }
 
   // Instance for JS code
@@ -52,6 +63,11 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
+    previewCode();
+    addStylesheets();
+    addScripts();
+    addFrameBasicStyle();
+    setTimeout(resizeIframePreview, 300);
   }
 
   // Instance for Vue code
@@ -64,6 +80,11 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
+    previewCode();
+    addStylesheets();
+    addScripts();
+    addFrameBasicStyle();
+    setTimeout(resizeIframePreview, 300);
   }
 
   // Instance for HTML Mixed code
@@ -76,9 +97,15 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
+    previewCode();
+    addStylesheets();
+    addScripts();
+    addFrameBasicStyle();
+    setTimeout(resizeIframePreview, 300);
   }
 
-  // CODE EDITOR PREVIEW (iframe)
+  // CODE EDITOR PREVIEW (iframe) 
+  // -------------------------------------------------
 
   function previewCode() {
     let codePreview = document.querySelectorAll(".code-preview");
@@ -86,22 +113,17 @@ function codePreviewInit() {
     preview.open();
     preview.write(editor.getValue());
     preview.close();
-  }    
+  }
 
   function createIframePreview() {
     let codeEditors = document.querySelectorAll(".code-editor, .code-editor-html, .code-editor-js, .code-editor-css, .code-editor-vue, code-editor-mixed");
-    let codeEditorsDest = codeEditors[i];   
+    let codeEditorsDest = codeEditors[i];
     // Create iframe
     let codePreviewIframe = document.createElement("iframe"); 
     codePreviewIframe.classList.add("code-preview");
     // Append to document
     codeEditorsDest.insertAdjacentElement('beforebegin', codePreviewIframe);
     // Init preview & inject CSS / JS
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-    setTimeout(resizeIframePreview, 100);
   }
 
   function resizeIframePreview() {
@@ -114,6 +136,7 @@ function codePreviewInit() {
   }
 
   // EXTERNAL CSS & JS RESOURCES
+  // -------------------------------------------------
 
   // Add stylesheets
   function addStylesheets(href) {

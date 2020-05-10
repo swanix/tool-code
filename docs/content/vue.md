@@ -4,9 +4,7 @@
 <div id="app" v-cloak>
   <h3>{{ message }}</h3>
 </div>
-<style>
-[v-cloak] {display: none;}
-</style>
+<style>[v-cloak] {display: none;}</style>
 <script>
 function loadVue() {
   var app = new Vue({
