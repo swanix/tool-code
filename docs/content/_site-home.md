@@ -15,7 +15,7 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
 <script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.js"></script>
 ```
 
-#### Template rápido
+#### Inicio rápido
 
 ```html
 <!DOCTYPE html>
@@ -60,8 +60,8 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
 <!-- Docsify Copy Code Plugin -->
 <script src="https://unpkg.com/docsify-copy-code"></script>
 <!-- Docsify Coderix Plugin -->
-<link href="dist/coderix.css" rel="stylesheet">
-<script src="dist/coderix.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.js"></script>
 </body>
 </html>
 ```
