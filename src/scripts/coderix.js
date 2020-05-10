@@ -16,7 +16,7 @@ function codePreview (hook, vm) {
 function codePreviewInit() { 
   let delay;
 
-  // CODE EDITORS INIT
+//  CODE EDITORS INIT
 
   // Instance for HTML code
   let codeEditorHtml = document.querySelectorAll(".code-editor, .code-editor-html");
@@ -28,14 +28,10 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
   }
 
   // Instance for CSS code
-  let codeEditorCss = document.querySelectorAll(".code-editor css");
+  let codeEditorCss = document.querySelectorAll(".code-editor-css");
   for (var i = 0; i < codeEditorCss.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorCss[i], {
       mode: "css",
@@ -44,14 +40,10 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
   }
 
   // Instance for JS code
-  let codeEditorJs = document.querySelectorAll(".code-editor js");
+  let codeEditorJs = document.querySelectorAll(".code-editor-js");
   for (var i = 0; i < codeEditorJs.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorJs[i], {
       mode: "javascript",
@@ -60,14 +52,10 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
   }
 
   // Instance for Vue code
-  let codeEditorVue = document.querySelectorAll(".code-editor vue");
+  let codeEditorVue = document.querySelectorAll(".code-editor-vue");
   for (var i = 0; i < codeEditorVue.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorVue[i], {
       mode: "vue",
@@ -76,14 +64,10 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
   }
 
   // Instance for HTML Mixed code
-  let codeEditorMixed = document.querySelectorAll(".code-editor mixed");
+  let codeEditorMixed = document.querySelectorAll(".code-editor-mixed");
   for (var i = 0; i < codeEditorMixed.length; i++) {
     var editor = CodeMirror.fromTextArea(codeEditorMixed[i], {
       mode: "htmlmixed",
@@ -92,10 +76,6 @@ function codePreviewInit() {
       lineNumbers: true
     });
     createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
   }
 
   // CODE EDITOR PREVIEW (iframe)
@@ -109,13 +89,28 @@ function codePreviewInit() {
   }    
 
   function createIframePreview() {
-    let codeEditors = document.querySelectorAll(".code-editor");
+    let codeEditors = document.querySelectorAll(".code-editor, .code-editor-html, .code-editor-js, .code-editor-css, .code-editor-vue, code-editor-mixed");
     let codeEditorsDest = codeEditors[i];   
-
+    // Create iframe
     let codePreviewIframe = document.createElement("iframe"); 
     codePreviewIframe.classList.add("code-preview");
-    
+    // Append to document
     codeEditorsDest.insertAdjacentElement('beforebegin', codePreviewIframe);
+    // Init preview & inject CSS / JS
+    previewCode();
+    addStylesheets();
+    addScripts();
+    addFrameBasicStyle();
+    setTimeout(resizeIframePreview, 100);
+  }
+
+  function resizeIframePreview() {
+    let codePreview = document.querySelectorAll('.code-preview');
+    for (var i = 0; i < codePreview.length; i++) {
+      let codePreviewDoc = codePreview[i];
+      codePreviewDoc.style.height = codePreviewDoc.contentWindow.document.body.scrollHeight + 15 + 'px';
+      codePreviewDoc.style.transition = 'all 0.2s ease-out';
+    }
   }
 
   // EXTERNAL CSS & JS RESOURCES

@@ -1,9 +1,8 @@
 #### Vue
 
-<!-- <iframe class="code-preview" height="280px"></iframe> -->
-<textarea class="code-editor vue" name="code">
+<textarea class="code-editor-vue" name="code">
 <div id="app" v-cloak>
-  {{ message }}
+  <h3>{{ message }}</h3>
 </div>
 <style>
 [v-cloak] {display: none;}

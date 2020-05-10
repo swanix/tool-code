@@ -125,6 +125,8 @@ iframe.code-preview {
   margin-bottom: -4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  height: 80px;
+  overflow: hidden;
 }
 
 .code-editor,
