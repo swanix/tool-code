@@ -12262,12 +12262,7 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
-    createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-    setTimeout(resizeIframePreview, 300);
+    createCodePreview();
   }
 
   // Instance for CSS code
@@ -12279,12 +12274,7 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
-    createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-    setTimeout(resizeIframePreview, 300);
+    createCodePreview();
   }
 
   // Instance for JS code
@@ -12296,12 +12286,7 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
-    createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-    setTimeout(resizeIframePreview, 300);
+    createCodePreview();
   }
 
   // Instance for Vue code
@@ -12313,12 +12298,7 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
-    createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-    setTimeout(resizeIframePreview, 300);
+    createCodePreview();
   }
 
   // Instance for HTML Mixed code
@@ -12330,12 +12310,7 @@ function codePreviewInit() {
       readOnly: true,
       lineNumbers: true
     });
-    createIframePreview();
-    previewCode();
-    addStylesheets();
-    addScripts();
-    addFrameBasicStyle();
-    setTimeout(resizeIframePreview, 300);
+    createCodePreview();
   }
 
   // CODE EDITOR PREVIEW (iframe) 
@@ -12368,6 +12343,7 @@ function codePreviewInit() {
       codePreviewDoc.style.transition = 'all 0.2s ease-out';
     }
   }
+
 
   // EXTERNAL CSS & JS RESOURCES
   // -------------------------------------------------
@@ -12406,6 +12382,17 @@ function codePreviewInit() {
       body::before { background: none !important;}
     `;
     codePreviewDoc.appendChild(basicStyle);
+  }
+
+  // INIT CODE PREVIEW
+
+  function createCodePreview() {
+    createIframePreview();
+    previewCode();
+    addStylesheets();
+    addScripts();
+    addFrameBasicStyle();
+    setTimeout(resizeIframePreview, 300);
   }
 
 }
