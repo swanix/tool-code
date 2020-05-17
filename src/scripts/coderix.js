@@ -93,9 +93,15 @@ function codePreviewInit() {
   function createIframePreview() {
     let codeEditors = document.querySelectorAll(".code-editor, .code-editor-html, .code-editor-js, .code-editor-css, .code-editor-vue, code-editor-mixed");
     let codeEditorsDest = codeEditors[i];
+    let previewHeight = codeEditorsDest.getAttribute('data-height');
     // Create iframe
     let codePreviewIframe = document.createElement("iframe"); 
     codePreviewIframe.classList.add("code-preview");
+    if (!codeEditorsDest.hasAttribute("data-height")) {
+      codePreviewIframe.style.height = "250px";
+     } else {
+      codePreviewIframe.style.height = previewHeight;
+     }
     // Append to document
     codeEditorsDest.insertAdjacentElement('beforebegin', codePreviewIframe);
     // Init preview & inject CSS / JS
@@ -158,7 +164,7 @@ function codePreviewInit() {
     addStylesheets();
     addScripts();
     addFrameBasicStyle();
-    setTimeout(resizeIframePreview, 300);
+    // setTimeout(resizeIframePreview, 300);
   }
 
 }

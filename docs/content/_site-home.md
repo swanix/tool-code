@@ -57,8 +57,6 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
 
 <!-- Docsify -->
 <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-<!-- Docsify Copy Code Plugin -->
-<script src="https://unpkg.com/docsify-copy-code"></script>
 <!-- Docsify Coderix Plugin -->
 <link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.js"></script>
@@ -66,9 +64,55 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
 </html>
 ```
 
+### Ejemplos
+
+En tus documentos HTML o markdown puedes incluir editores con el elemento `<textarea>` asignando la clase respectiva para el lenguaje y el `data-height`para su previsualización.
+
+#### HTML
+
+```html
+<textarea class="code-editor-html" data-height="270px">
+<!-- HTML code goes here -->
+</textarea>
+```
+
+#### CSS
+
+```html
+<textarea class="code-editor-css" data-height="270px">
+<!-- CSS code goes here -->
+</textarea>
+```
+
+#### Javascript
+
+```html
+<textarea class="code-editor-js" data-height="270px">
+<!-- JavaScript code goes here -->
+</textarea>
+```
+
+#### Vue
+
+```html
+<textarea class="code-editor-vue" data-height="270px">
+<!-- Vue code goes here -->
+</textarea>
+```
+
+#### Mixed
+
+El editor en modo mixed permite incluir código HTML, CSS y JavaScript.
+
+```html
+<textarea class="code-editor-mixed" data-height="270px">
+<!-- HTML, CSS, JavaScript code goes here -->
+</textarea>
+```
+
 ### Dependencias
 
-Este plugin utiliza la librería Codemirror v5.48.4 con los modos XML, CSS y JavaScript:
+Este plugin utiliza la librería Codemirror con los modos XML, CSS, JavaScript, Vue y Mixed:
 
 - codemirror.css
 - codemirror.js

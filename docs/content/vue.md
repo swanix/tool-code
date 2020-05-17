@@ -1,6 +1,6 @@
 ## Vue
 
-<textarea class="code-editor-vue" name="code">
+<textarea class="code-editor-vue" data-height="180px">
 <div id="app" v-cloak>
   <h3>{{ message }}</h3>
   <h5>{{ subtitle }}</h5>
@@ -24,7 +24,7 @@ window.addEventListener("load", loadVue);
 
 #### Element UI (Test)
 
-<textarea class="code-editor-vue" name="code">
+<textarea class="code-editor-vue" data-height="440px">
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +70,7 @@ window.addEventListener("load", loadVue);
 
 #### Vuetify (Test)
 
-<textarea class="code-editor-vue" name="code">
+<textarea class="code-editor-vue" data-height="640px">
 <!DOCTYPE html>
 <html>
 <head>
@@ -121,7 +121,6 @@ window.addEventListener("load", loadVue);
       </v-content>
     </v-app>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script>

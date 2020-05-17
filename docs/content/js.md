@@ -1,7 +1,7 @@
 
 #### JavaScript
 
-<textarea class="code-editor-js" name="code">
+<textarea class="code-editor-js" data-height="270px">
 <script>
 function addElement() { 
   var newDiv = document.createElement("div"); 
