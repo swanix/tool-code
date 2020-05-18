@@ -1,7 +1,7 @@
 
-#### JavaScript
+## JavaScript
 
-<textarea class="code-editor-js" data-height="270px">
+<textarea code-editor="js" code-result-size="240">
 <script>
 function addElement() { 
   var newDiv = document.createElement("div"); 
@@ -17,3 +17,19 @@ function addElement() {
 document.addEventListener("DOMContentLoaded", addElement);
 </script>
 </textarea>
+
+#### Code only
+
+<textarea code-editor="js" code-result="hidden" code-result-size="240">
+<script>
+function resizeIframePreview() {
+  let codePreview = document.querySelectorAll('.code-preview');
+  for (var i = 0; i < codePreview.length; i++) {
+    let codePreviewDoc = codePreview[i];
+    codePreviewDoc.style.height = codePreviewDoc.contentWindow.document.body.scrollHeight + 15 + 'px';
+  }
+}
+</script>
+</textarea>
+
+

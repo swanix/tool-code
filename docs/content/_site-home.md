@@ -64,14 +64,20 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
 </html>
 ```
 
-### Ejemplos
+### Editores
 
-En tus documentos HTML o markdown puedes incluir editores con el elemento `<textarea>` asignando la clase respectiva para el lenguaje y el `data-height`para su previsualización.
+En tus documentos HTML o markdown puedes incluir editores con el elemento `<textarea>` asignando el atributo `code-editor` y los atributos opcionales `code-result` y `code-result-size`para su previsualización.
+
+| Atributo            | Por defecto | Opciones                  | Comentarios |
+| :-------------------|:------------|:--------------------------|:--------------|
+| code-editor         | undefined   | html, css, js, vue, mixed |Obligatorio para instanciar el editor|
+| code-result         | undefined   | visible, hidden           |Opcional, por defecto siempre es visible|
+| code-result-size    | 180         | number                    |Opcional, no acepta unidades (medida en px)|
 
 #### HTML
 
 ```html
-<textarea class="code-editor-html" data-height="270px">
+<textarea code-editor="html" code-result-size="200">
 <!-- HTML code goes here -->
 </textarea>
 ```
@@ -79,15 +85,15 @@ En tus documentos HTML o markdown puedes incluir editores con el elemento `<text
 #### CSS
 
 ```html
-<textarea class="code-editor-css" data-height="270px">
+<textarea code-editor="css" code-result-size="200">
 <!-- CSS code goes here -->
 </textarea>
 ```
 
-#### Javascript
+#### JavaScript
 
 ```html
-<textarea class="code-editor-js" data-height="270px">
+<textarea code-editor="js" code-result-size="200">
 <!-- JavaScript code goes here -->
 </textarea>
 ```
@@ -95,7 +101,7 @@ En tus documentos HTML o markdown puedes incluir editores con el elemento `<text
 #### Vue
 
 ```html
-<textarea class="code-editor-vue" data-height="270px">
+<textarea code-editor="vue" code-result-size="200">
 <!-- Vue code goes here -->
 </textarea>
 ```
@@ -105,7 +111,7 @@ En tus documentos HTML o markdown puedes incluir editores con el elemento `<text
 El editor en modo mixed permite incluir código HTML, CSS y JavaScript.
 
 ```html
-<textarea class="code-editor-mixed" data-height="270px">
+<textarea code-editor="mixed" code-result-size="200">
 <!-- HTML, CSS, JavaScript code goes here -->
 </textarea>
 ```

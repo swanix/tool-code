@@ -1,6 +1,6 @@
 #### CSS
 
-<textarea class="code-editor-css" data-height="200px">
+<textarea code-editor="css" code-result-size="200">
 <h3>Basic title</h3>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc est, 
