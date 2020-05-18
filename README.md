@@ -31,7 +31,7 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/swanix/docsix/dist/docsix.min.css">
 </head>
 <body>
 <div id="app"></div>
@@ -59,8 +59,8 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
   };
 </script>
 
-<!-- Docsify -->
-<script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<!-- Docsify Custom -->
+<script src="https://cdn.jsdelivr.net/gh/swanix/docsix/dist/docsix.min.js"></script>
 <!-- Docsify Coderix Plugin -->
 <link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.js"></script>
