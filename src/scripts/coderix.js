@@ -1,19 +1,11 @@
-// Coderix - Docsify Plugin
+// Coderix - Library
 
 "use strict";
 
 let loadJs = [];
 let loadCss = [];
 
-$docsify.plugins = [].concat(codeResult, $docsify.plugins)
-
-function codeResult (hook, vm) {
-  hook.doneEach(function () {
-    setTimeout(codeResultInit, 300);
-  })
-}
-
-function codeResultInit() { 
+function initCodeEditor() { 
   let delay;
 
   //  CODE EDITORS INIT
@@ -170,3 +162,4 @@ function codeResultInit() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", initCodeEditor);

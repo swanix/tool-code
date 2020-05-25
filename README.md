@@ -1,35 +1,66 @@
 # Coderix
 
-Experimental plugin for Docsify
+Experimental code editor based on CodeMirror
 
 ## Quick start
 
-Coderix es un plugin de Docsify que te permite incrustar ejemplos de código en tu documentación utilizando Codemirror en archivos markdown. 
+Coderix es una librería que te permite incrustar ejemplos de código en tu documentación utilizando CodeMirror en archivos HTML y markdown. 
 
-Este plugin se encuentra en etapa experimental, no recomendamos utilizarlo en producción.
+Esta librería se encuentra en etapa experimental, no recomendamos utilizarlo en producción.
 
 ### Instalación
 
 #### CDN
 
-Incluye los siguientes links de CDN en tu archivo index.html luego del archivo JavaScript de Docsify
+Incluye los siguientes links de CDN en tu archivo HTML
 
 ```html
 <link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.js"></script>
 ```
 
-#### Inicio rápido
+#### HTML template
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Coderix</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coderix</title>
+</head>
+<body>
+
+<h1>Code exammple</h1>
+<textarea code-editor="html" code-result-size="200">
+  <h5>Buttons</h5>
+  <button class="is-basic">Button</button>
+  <button class="is-primary">Button</button>
+  <button class="is-secondary">Button</button>
+</textarea>
+
+<!-- Coderix Library -->
+<link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.js"></script>
+<script>
+  loadCss = ["https://swanix.org/ui/dist/swanix.min.css"];
+  loadJs =  ["https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"];
+</script>
+</body>
+</html>
+```
+
+#### Docsify template
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coderix</title>
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/swanix/docsix/dist/docsix.min.css">
 </head>
@@ -47,23 +78,20 @@ Incluye los siguientes links de CDN en tu archivo index.html luego del archivo J
     plugins: [
       function(hook, vm) {
         hook.doneEach(function() {
-          loadCss = [
-            "https://swanix.org/ui/dist/swanix.min.css"
-          ];
-          loadJs = [
-            "https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"
-          ];
+          loadCss = ["https://swanix.org/ui/dist/swanix.min.css"];
+          loadJs =  ["https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"];
+          setTimeout(initCodeEditor, 300);
         });
       }
     ]
   };
 </script>
 
-<!-- Docsify Custom -->
+<!-- Docsify -->
 <script src="https://cdn.jsdelivr.net/gh/swanix/docsix/dist/docsix.min.js"></script>
 <!-- Docsify Coderix Plugin -->
-<link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.js"></script>
 </body>
 </html>
 ```

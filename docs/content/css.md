@@ -1,6 +1,6 @@
 #### CSS
 
-<textarea code-editor="css" code-result-size="200">
+<textarea code-editor="css" code-result-size="220">
 <h3>Basic title</h3>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc est, 

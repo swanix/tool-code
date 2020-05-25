@@ -20,7 +20,7 @@
 
 #### Text 1
 
-<textarea code-editor="html" code-result-size="220">
+<textarea code-editor="html" code-result-size="240">
 <h3>Paragraph 1</h3>
 <p>
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -33,7 +33,7 @@
 
 #### Text 2
 
-<textarea code-editor="html" code-result-size="220">
+<textarea code-editor="html" code-result-size="240">
 <h3>Paragraph 2</h3>
 <p>
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

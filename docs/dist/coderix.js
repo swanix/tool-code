@@ -1,5 +1,5 @@
 /*!
- * Coderix - v0.4.0
+ * Coderix - v0.5.0
  * https://github.com/swanix/coderix
  * @license MIT
  * Based on CodeMirror - v5.53.2
@@ -12232,22 +12232,14 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
   CodeMirror.defineMIME("text/html", "htmlmixed");
 });
 
-// Coderix - Docsify Plugin
+// Coderix - Library
 
 "use strict";
 
 let loadJs = [];
 let loadCss = [];
 
-$docsify.plugins = [].concat(codeResult, $docsify.plugins)
-
-function codeResult (hook, vm) {
-  hook.doneEach(function () {
-    setTimeout(codeResultInit, 300);
-  })
-}
-
-function codeResultInit() { 
+function initCodeEditor() { 
   let delay;
 
   //  CODE EDITORS INIT
@@ -12404,3 +12396,4 @@ function codeResultInit() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", initCodeEditor);
