@@ -10,7 +10,7 @@ Tool Code es una librería que te permite incrustar ejemplos de código en tu do
 
 #### CDN
 
-Incluye los siguientes links de CDN en tu archivo HTML
+Incluye los siguientes links de CDN en tu archivo HTML.
 
 ```html
 <link href="https://cdn.jsdelivr.net/gh/swanix/tool-code@latest/dist/tool-code.css" rel="stylesheet">
