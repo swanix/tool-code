@@ -1,12 +1,10 @@
-# Coderix
+# Swanix - Tool Code
 
-Experimental code editor based on CodeMirror
+Experimental code editor based on CodeMirror.
 
-## Quick start
+### Quick start
 
-Coderix es una librería que te permite incrustar ejemplos de código en tu documentación utilizando CodeMirror en archivos HTML y markdown. 
-
-Esta librería se encuentra en etapa experimental, no recomendamos utilizarlo en producción.
+Tool Code es una librería que te permite incrustar ejemplos de código en tu documentación utilizando CodeMirror en archivos HTML y markdown.
 
 ### Instalación
 
@@ -15,8 +13,8 @@ Esta librería se encuentra en etapa experimental, no recomendamos utilizarlo en
 Incluye los siguientes links de CDN en tu archivo HTML
 
 ```html
-<link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/swanix/tool-code@latest/dist/tool-code.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/swanix/tool-code@latest/dist/tool-code.js"></script>
 ```
 
 #### HTML template
@@ -28,7 +26,7 @@ Incluye los siguientes links de CDN en tu archivo HTML
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Coderix</title>
+  <title>Swanix - Tool Code</title>
 </head>
 <body>
 
@@ -40,9 +38,9 @@ Incluye los siguientes links de CDN en tu archivo HTML
   <button class="is-secondary">Button</button>
 </textarea>
 
-<!-- Coderix Library -->
-<link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.js"></script>
+<!-- Tool Code Library -->
+<link href="https://cdn.jsdelivr.net/gh/swanix/tool-code@latest/dist/tool-code.css" rel="stylesheet" >
+<script src="https://cdn.jsdelivr.net/gh/swanix/tool-code@latest/dist/tool-code.js"></script>
 <script>
   loadCss = ["https://swanix.org/ui/dist/swanix.min.css"];
   loadJs =  ["https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"];
@@ -60,7 +58,7 @@ Incluye los siguientes links de CDN en tu archivo HTML
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Coderix</title>
+  <title>Swanix - Tool Code</title>
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/swanix/docsix/dist/docsix.min.css">
 </head>
@@ -87,11 +85,11 @@ Incluye los siguientes links de CDN en tu archivo HTML
   };
 </script>
 
-<!-- Docsify -->
-<script src="https://cdn.jsdelivr.net/gh/swanix/docsix/dist/docsix.min.js"></script>
-<!-- Docsify Coderix Plugin -->
-<link href="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/swanix/coderix/dist/coderix.min.js"></script>
+<!-- Tool Docs Library -->
+<script src="https://cdn.jsdelivr.net/gh/swanix/tool-docs@latest/dist/tool-docs.js"></script>
+<!-- Tool Code Library -->
+<link href="https://cdn.jsdelivr.net/gh/swanix/tool-code@latest/dist/tool-code.css" rel="stylesheet" >
+<script src="https://cdn.jsdelivr.net/gh/swanix/tool-code@latest/dist/tool-code.js"></script>
 </body>
 </html>
 ```

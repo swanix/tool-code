@@ -1,4 +1,4 @@
-  * [Quick start](/)
+  * [Overview](/)
   * Examples
     * [HTML](/html)
     * [CSS](/css)

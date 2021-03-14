@@ -1,5 +1,5 @@
 //-----------------------------------------------------
-// Coderix
+// Swanix - Tool Code
 // by Sebastian Serna
 // (c) 2019-present
 //-----------------------------------------------------
@@ -64,7 +64,7 @@ function sass_compiler() {
     .pipe(dest(outputSass))
     .pipe(dest(outputDocs))
     .pipe(cleanCSS())
-    .pipe(rename('coderix.min.css'))
+    .pipe(rename('tool-code.min.css'))
     .pipe(dest(outputSass))
     .pipe(dest(outputDocs));
 }
@@ -75,14 +75,14 @@ function sass_compiler() {
 
 // JS paths
 var inputJs = [
-    "src/scripts/coderix-version.js",
+    "src/scripts/tool-code-version.js",
     "src/scripts/codemirror.js",
     "src/scripts/codemirror-mode-javascript.js",
     "src/scripts/codemirror-mode-xml.js",
     "src/scripts/codemirror-mode-css.js",
     "src/scripts/codemirror-mode-vue.js",
     "src/scripts/codemirror-mode-htmlmixed.js",
-    "src/scripts/coderix.js"
+    "src/scripts/tool-code.js"
 ];
 var outputJs = 'dist/';
 var outputJsDocs = 'docs/dist/';
@@ -90,10 +90,10 @@ var outputJsDocs = 'docs/dist/';
 function js_concat() {
   return src(inputJs)
     .pipe(plumber())
-    .pipe(concat('coderix.js'))
+    .pipe(concat('tool-code.js'))
     .pipe(dest(outputJs))
     .pipe(dest(outputJsDocs))
-    .pipe(rename('coderix.min.js'))
+    .pipe(rename('tool-code.min.js'))
     .pipe(terser())
     .pipe(dest(outputJs))
     .pipe(dest(outputJsDocs));

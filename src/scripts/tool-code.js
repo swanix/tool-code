@@ -1,4 +1,4 @@
-// Coderix - Library
+// Swanix - Tool Code - Library
 
 "use strict";
 

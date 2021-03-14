@@ -1,6 +1,6 @@
 {
-  "name": "@swanix/coderix",
-  "version": "0.5.0",
+  "name": "@swanix/tool-code",
+  "version": "0.6.0",
   "description": "Embed code plugin",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swanix/coderix"
+    "url": "git+https://github.com/swanix/tool-code"
   },
   "author": "Sebastian Serna <jsebastianserna@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/swanix/coderix/issues"
+    "url": "https://github.com/swanix/tool-code/issues"
   },
-  "homepage": "https://swanix.org/coderix",
+  "homepage": "https://swanix.org/tool-code",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 2.14.2"

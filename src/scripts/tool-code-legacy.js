@@ -1,4 +1,4 @@
-// Coderix - Docsify Plugin
+// Swanix - Tool Code (Coderix)
 
 "use strict";
 

@@ -1,6 +1,6 @@
 /*!
- * Coderix - v0.5.0
- * https://github.com/swanix/coderix
+ * Swanix - Tool Code - v0.6.0
+ * https://github.com/swanix/tool-code
  * @license MIT
  * Based on CodeMirror - v5.53.2
 */
@@ -12232,7 +12232,7 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
   CodeMirror.defineMIME("text/html", "htmlmixed");
 });
 
-// Coderix - Library
+// Swanix - Tool Code - Library
 
 "use strict";
 
